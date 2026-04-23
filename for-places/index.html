@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>For Bars &amp; Venues | Treasure Valley Tech Tavern</title>
+  <link rel="icon" type="image/png" href="../favicon-tvtt.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chicle&family=Cute+Font&family=Jersey+15&display=swap" rel="stylesheet">
@@ -323,6 +324,43 @@
       background: transparent;
     }
 
+    .tvtt-site-footer {
+      padding: 28px 16px 34px;
+      border-top: 1px solid rgba(99, 224, 229, 0.22);
+      background: #0b0b0b;
+    }
+
+    .tvtt-site-footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px 24px;
+      margin: 0 auto;
+      max-width: 980px;
+    }
+
+    .tvtt-site-footer-nav a {
+      color: var(--tvtt-text);
+      font-family: "Chicle", Arial, sans-serif;
+      font-size: 1.35rem;
+      line-height: 1;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .tvtt-site-footer-nav a:hover,
+    .tvtt-site-footer-nav a:focus-visible {
+      color: var(--tvtt-cyan);
+    }
+
+    .tvtt-site-footer-copy {
+      margin: 18px 0 0;
+      color: var(--tvtt-muted);
+      font-size: 1.35rem;
+      line-height: 1.1;
+      text-align: center;
+    }
+
     .tvtt-venue-seo {
       max-width: 900px;
       margin: 56px auto 0;
@@ -386,6 +424,10 @@
         font-size: 1.15rem;
       }
 
+      .tvtt-site-footer-nav a {
+        font-size: 1.1rem;
+      }
+
       .tvtt-venue-help {
         padding: 168px 18px 54px;
       }
@@ -433,8 +475,8 @@
       </a>
       <nav class="tvtt-site-nav" aria-label="Main navigation">
         <a href="https://treasurevalleytechtavern.com">Home</a>
-        <a href="../for-bands/">For Bands</a>
-        <a href="../for-places/" aria-current="page">For Bars &amp; Venues</a>
+        <a href="https://help.treasurevalleytechtavern.com/for-bands/">For Bands</a>
+        <a href="https://help.treasurevalleytechtavern.com/for-places/" aria-current="page">For Bars &amp; Venues</a>
         <a href="https://clips.treasurevalleytechtavern.com">Clips</a>
         <a href="https://treasurevalleytechtavern.com/about">About Us</a>
       </nav>
@@ -611,6 +653,16 @@
         </div>
       </div>
     </section>
+
+    <footer class="tvtt-site-footer">
+      <nav class="tvtt-site-footer-nav" aria-label="Footer">
+        <a href="https://treasurevalleytechtavern.com">Home</a>
+        <a href="https://help.treasurevalleytechtavern.com">How We Help</a>
+        <a href="https://clips.treasurevalleytechtavern.com">Clips</a>
+        <a href="https://treasurevalleytechtavern.com/about">About Us</a>
+      </nav>
+      <p class="tvtt-site-footer-copy">Copyright &copy; 2026 Treasure Valley Tech Tavern - Boise, Idaho - All Rights Reserved.</p>
+    </footer>
   </main>
 </body>
 </html>
