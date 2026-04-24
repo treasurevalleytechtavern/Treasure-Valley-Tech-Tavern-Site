@@ -17,6 +17,7 @@
       --tvtt-muted: #e6e6e6;
       --tvtt-cyan: #63e0e5;
       --tvtt-red: #ff1637;
+      --tvtt-header-offset: 122px;
     }
 
     * {
@@ -34,7 +35,7 @@
       min-height: 100vh;
       overflow-x: hidden;
       background: #000;
-      padding-top: 86px;
+      padding-top: var(--tvtt-header-offset);
     }
 
     .tvtt-site-header {
@@ -169,17 +170,17 @@
       position: relative;
       background: #000;
       color: #fff;
-      padding: 150px 20px 70px;
+      padding: 56px 20px 64px;
       overflow: hidden;
     }
 
     .tvtt-venue-help-media {
       position: fixed;
-      top: 86px;
+      top: var(--tvtt-header-offset);
       right: 0;
       left: 0;
       z-index: 0;
-      height: calc(100vh - 86px);
+      height: calc(100vh - var(--tvtt-header-offset));
       overflow: hidden;
       pointer-events: none;
     }
@@ -271,7 +272,7 @@
     .tvtt-venue-help li {
       color: #e6e6e6;
       font-family: "Cute Font", Arial, sans-serif;
-      font-size: 28px;
+      font-size: 1.9rem;
       line-height: 1.5;
     }
 
@@ -518,10 +519,10 @@
 
     @media (max-width: 700px) {
       .tvtt-venue-help-media {
-        top: 110px;
+        top: 126px;
         right: 0;
         left: 0;
-        height: calc(100vh - 110px);
+        height: calc(100vh - 126px);
       }
 
       .tvtt-venues-page {
@@ -529,7 +530,7 @@
       }
 
       .tvtt-venue-help {
-        padding: 168px 18px 54px;
+        padding: 48px 18px 54px;
       }
 
       .tvtt-venue-help-title {
@@ -768,6 +769,7 @@
         <a href="https://treasurevalleytechtavern.com">Home</a>
         <a href="https://help.treasurevalleytechtavern.com">How We Help</a>
         <a href="https://clips.treasurevalleytechtavern.com">Clips</a>
+        <a href="https://places.treasurevalleytechtavern.com">Places</a>
         <a href="https://treasurevalleytechtavern.com/about">About Us</a>
       </nav>
       <p class="tvtt-site-footer-copy">Copyright &copy; 2026 Treasure Valley Tech Tavern - Boise, Idaho - All Rights Reserved.</p>

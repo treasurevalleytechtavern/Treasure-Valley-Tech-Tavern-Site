@@ -18,6 +18,7 @@
       --tvtt-muted: #dbe3e7;
       --tvtt-soft: #aeb7bd;
       --tvtt-cyan: #63e0e5;
+      --tvtt-header-offset: 122px;
     }
 
     * {
@@ -37,7 +38,7 @@
     .tvtt-help-page {
       min-height: 100vh;
       overflow-x: hidden;
-      padding-top: 86px;
+      padding-top: var(--tvtt-header-offset);
     }
 
     .tvtt-site-header {
@@ -171,7 +172,7 @@
     }
 
     .tvtt-help {
-      padding: 72px 20px 84px;
+      padding: 56px 20px 72px;
     }
 
     .tvtt-help-inner {
@@ -363,6 +364,10 @@
     }
 
     @media (max-width: 960px) {
+      :root {
+        --tvtt-header-offset: 122px;
+      }
+
       .tvtt-site-header {
         padding: 12px 16px 14px;
       }
@@ -417,8 +422,8 @@
     }
 
     @media (max-width: 700px) {
-      .tvtt-help-page {
-        padding-top: 126px;
+      :root {
+        --tvtt-header-offset: 126px;
       }
 
       .tvtt-help-grid {
