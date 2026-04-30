@@ -1,0 +1,227 @@
+:root {
+  --tvtt-header-height: 86px;
+}
+
+.tvtt-site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 30;
+  width: 100%;
+  padding: 12px 42px;
+  background: #171717;
+  border-bottom: 1px solid rgba(99, 224, 229, 0.3);
+  backdrop-filter: blur(12px);
+}
+
+.tvtt-site-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 61px;
+  width: min(100%, 1480px);
+  margin: 0 auto;
+}
+
+.tvtt-site-logo {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.tvtt-site-logo img {
+  display: block;
+  width: 132px;
+  height: auto;
+}
+
+.tvtt-site-nav {
+  margin-left: auto;
+}
+
+.tvtt-site-nav-list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(14px, 1.8vw, 24px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tvtt-site-nav a,
+.tvtt-site-footer-nav a {
+  color: var(--tvtt-text);
+  font-family: "Chicle", Arial, sans-serif;
+  font-size: 1.35rem;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.tvtt-site-nav a:hover,
+.tvtt-site-nav a:focus-visible,
+.tvtt-site-nav a[aria-current="page"],
+.tvtt-site-footer-nav a:hover,
+.tvtt-site-footer-nav a:focus-visible {
+  color: var(--tvtt-cyan);
+}
+
+.tvtt-site-nav-toggle {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid rgba(99, 224, 229, 0.45);
+  border-radius: 8px;
+  color: var(--tvtt-text);
+  background: transparent;
+  font-family: "Chicle", Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.tvtt-site-nav-toggle-icon,
+.tvtt-site-nav-toggle-icon::before,
+.tvtt-site-nav-toggle-icon::after {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 160ms ease, opacity 160ms ease;
+  content: "";
+}
+
+.tvtt-site-nav-toggle-icon {
+  position: relative;
+}
+
+.tvtt-site-nav-toggle-icon::before {
+  position: absolute;
+  top: -6px;
+  left: 0;
+}
+
+.tvtt-site-nav-toggle-icon::after {
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+
+.tvtt-site-header.is-open .tvtt-site-nav-toggle-icon {
+  background: transparent;
+}
+
+.tvtt-site-header.is-open .tvtt-site-nav-toggle-icon::before {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.tvtt-site-header.is-open .tvtt-site-nav-toggle-icon::after {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.tvtt-site-nav a:focus-visible,
+.tvtt-site-nav-toggle:focus-visible {
+  outline: 2px solid var(--tvtt-cyan);
+  outline-offset: 6px;
+}
+
+.tvtt-site-footer {
+  position: relative;
+  z-index: 2;
+  padding: 28px 16px 34px;
+  border-top: 1px solid rgba(99, 224, 229, 0.22);
+  background: #0b0b0b;
+}
+
+.tvtt-site-footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 24px;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.tvtt-site-footer-copy {
+  margin: 18px 0 0;
+  color: var(--tvtt-soft, var(--tvtt-muted));
+  font-size: 1.35rem;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.tvtt-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.tvtt-cta-row .tvtt-band-help-button,
+.tvtt-cta-row .tvtt-venue-help-button {
+  width: auto;
+  min-width: 200px;
+}
+
+@media (max-width: 960px) {
+  .tvtt-site-header {
+    padding: 12px 16px 14px;
+  }
+
+  .tvtt-site-header-bar {
+    flex-wrap: wrap;
+    gap: 14px 18px;
+  }
+
+  .tvtt-site-logo img {
+    width: 110px;
+  }
+
+  .tvtt-site-nav-toggle {
+    display: inline-flex;
+  }
+
+  .tvtt-site-nav {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding-top: 14px;
+  }
+
+  .tvtt-site-header.is-open .tvtt-site-nav {
+    display: block;
+  }
+
+  .tvtt-site-nav-list {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+    padding-top: 14px;
+    border-top: 1px solid rgba(99, 224, 229, 0.22);
+  }
+
+  .tvtt-site-nav li,
+  .tvtt-site-nav a {
+    width: 100%;
+  }
+
+  .tvtt-site-nav a {
+    display: block;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    text-align: right;
+  }
+
+  .tvtt-site-footer-nav a {
+    font-size: 1.1rem;
+  }
+}
